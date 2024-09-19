@@ -1,0 +1,351 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+
+    font-family: 'open sans';
+}
+.nav{
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    font-family: 'PT Sans',sans-serif;
+    justify-content: space-between;
+    padding:25px ;
+    transition: all 0.5s ease;
+}
+.nav.active {
+    z-index: 999;
+   background: #fff;
+    box-shadow:  0 0 10px #000;
+    padding: 15px;
+}
+.nav.active .logo, .nav.active a{
+    color: #004a61;
+}
+.nav.active a:hover{
+    background: #004a61;
+    color: #fff;
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 100;
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    margin: 10px;
+}
+.menu li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.menu li a:hover{
+    padding: 5px 10px;
+    background: #fff;
+    color: #004a61;
+    border-radius: 15px;
+}
+.scrol{
+    height: 100px;
+}
+
+/*general*/
+.contenedor{
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.integrantes {
+
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+    padding-top: 30px;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*contenedor*/
+.caja {
+    max-width: 45%;
+    border-radius: 8px;
+    padding: 50px;
+    margin: 20px 0;
+    color: #004a61;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor h2{
+    margin-bottom: 70px;
+    color:#004a61;
+}
+.caja {
+    transition: transform 0.3s; 
+}
+.caja:hover {
+    transform: scale(1.08); 
+}
+.about-img{
+    margin-right: 50px;
+    width: 35%;
+    object-fit: cover;
+}
+.header{
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.wave{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.textos-header h1{
+    padding-top: 2%;
+    font-size: 4rem;
+    color: #fff;
+}
+.textos-header h2{
+    padding: 40px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #fff;
+}
+@media screen and (max-width: 768px) {
+    .textos-header h1 {
+        max-width: 80%;
+        font-size: 2.5rem; /* Reducir el tamaño de fuente en pantallas más pequeñas */
+    }
+    .textos-header h2{
+        max-width: 80%;
+        padding: 20px;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #fff;
+    }
+}
+.contenedor-Acerca-de {
+    justify-content: space-between;
+    text-align: justify;
+    align-items: center;
+    margin: 0 auto 35px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contenedor-Acerca-de h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.footer{
+    text-align: right;
+    margin-right: 30px;
+}
+
+.button-container {
+    text-align: center;
+    position: absolute;
+    top: 360px;
+}
+.button-application {
+    font-size: 1.5em;
+    background-color: #fff;
+    width: calc(20% - 500px); 
+    color: #004a61   ;
+    border-radius: 8px;
+    position: relative;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s;
+    
+ }
+ .button-application:hover{
+    background-color: #fff;
+    box-shadow:  0 0 10px #fff,
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff;
+
+
+ }
+
+.button-application:hover::before{width: 100%;   }
+
+
+
+
+/* integrantes*/
+@media screen and (max-width: 768px) {
+    .card {
+        margin-bottom: 30% !important; /* Margen negativo en la parte superior e inferior, sin modificar el margen lateral */
+    }
+    .integrantes .card .description p{
+        font-size: 14px;
+    }
+
+    .integrantes .card .description h3{
+        color: #004a61;
+        font-size: 16px;
+    }
+    .integrantes .card .description h4{
+        color: #186e88;
+        font-size: 15px;
+    }
+    .integrantes .gen{
+
+        padding: 3px 17% 50px 17% !important;
+    }
+    .integrantes .card .head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .integrantes .card .head .circle {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: #004a61;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+.integrantes .gen{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20% 20px 20%;
+}
+.integrantes .card {
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 3.2%; /* Espacio entre las tarjetas */
+    transition: 0.5s;
+    margin-bottom: 8%;
+    box-shadow:  0 0 5px #000;
+}
+
+.integrantes .card:hover {
+    box-shadow: 0 5px 20px #306e79;
+    transform: translateY(-15px);
+}
+.integrantes .card .head{
+    height: 125px;
+    width: 100%;
+    position:  relative;
+}
+.integrantes .card .head .circle{
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #004a61;
+    bottom:0;
+}
+.integrantes .card .head .img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    bottom: -30%;
+    left: 50%;
+    transform:  translate(-50%);
+}
+.integrantes .card .head .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.integrantes .card .description {
+    height: 200px;
+    padding: 40px 20px 20px 20px;
+    border-bottom: solid 1px #004a61;
+    text-align: center;
+}
+.integrantes .card .description h3{
+    color: #004a61;
+}
+.integrantes .card .description h4{
+    color: #186e88;
+}
+.integrantes .card .description p{
+    text-align: center;
+
+
+    margin-top: 25px;
+}
+.integrantes .card .codigo{
+    height: 200px;
+    padding: 8px 20px 20px 20px;
+    text-align: center;
+}
+.integrantes .card .codigo h3{
+    color: #186e88;
+}
+.titulo {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004a61;
+}
+/*footer*/
+.footer {
+    max-width: 70%;
+    background-color: #004a61;
+    padding: 3% 10%;
+    margin-left: 14.5%;
+    color: #fff;
+    text-align: center; /* Centrar el texto horizontalmente */
+    font-size: 14px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}

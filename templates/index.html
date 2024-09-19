@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+    <!--{{url_for('static', filename='css/index.css')}}-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+</head>
+
+<body>
+  <header class="header " style="background-image: url(&apos;{{url_for('static',filename='img/header.jpg')}}&apos;);">
+    <nav class="nav">
+      <div class="logo">Grupo 5</div>
+      <ul class="menu">
+        <li>
+          <a href="/application">Aplicación</a>
+        </li>
+        <li>
+          <a href="#integrantes">Integrantes</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="textos-header font-bold ">
+      <h1>TechPulse</h1>
+      <h2>Una mejor forma de llegar a nuestros clientes... Spricture Inc.</h2>
+      <div class="button-container font-bold ">
+        <a href="/application" class="button-application">PROBAR</a>
+      </div>
+    </section>
+    <div class="wave" style="height: 150px; overflow: hidden;">
+      <svg viewbox="0 0 500 150" preserveaspectratio="none" style="height: 100%; width: 100%;">
+        <path d="M-5.64,33.06 C86.34,-58.69 315.46,110.05 500.00,49.98 L588.03,174.19 L0.00,150.00 Z"
+          style="stroke: none; fill: #fff;"></path>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <section class="contenedor" style="margin-bottom: 20px;">
+      <h2 class="titulo1 text-4xl text-center font-bold">¿Que es TechPulse?</h2>
+      <div class="contenedor-Acerca-de w-full flex flex-wrap">
+        <div class="caja sm:w-full ">
+          <div class="texto-caja">
+            <h3 class="tit_que">1. Acerca de</h3>
+            <p>El objetivo principal de TechPulse es mejorar la presencia digital de Spricture Inc.,
+                 optimizar la interacción con la comunidad de ingenieros, 
+                 desarrolladores y entusiastas de la tecnología, y facilitar
+                  el acceso a sus productos mediante una tienda en línea 
+                  robusta y escalable. Esta plataforma ayudará a la empresa 
+                  a trascender las limitaciones de su tienda física y 
+                  alcanzar un mercado global, ofreciendo no solo la 
+                  venta de componentes, sino también un sistema sólido 
+                  de gestión de inventario y trazabilidad de pedidos​</p>
+          </div>
+        </div>
+        <div class="about-img">
+            <img src="{{url_for('static',filename='img/about.jpeg')}}" alt="">
+        </div>
+      </div>
+    </section>
+    <section class="integrantes" id="integrantes">
+      <h1 class="titulo text-4xl font-bold">Desarrollado por:</h1>
+      <div class="gen w-full flex justify-center">
+        <div class="card">
+          <div class="head">
+            <div class="circle"></div>
+            <div class="img">
+              <img src="{{url_for('static',filename='img/diego.png')}}" alt="">
+            </div>
+          </div>
+
+          <div class="description">
+            <h3 class="pj font-bold text-xl">Diego Acuña</h3>
+            <h4 class="pjt font-bold">Ingenieria de Software</h4>
+            <p style="font-family: Consolas, monospace;">BugFreeNow</p>
+          </div>
+          <div class="codigo">
+            <h3>Código de alumno</h3>
+            <h4>U202221436</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head">
+            <div class="circle"></div>
+            <div class="img">
+              <img src="{{url_for('static',filename='img/joaquin.jpg')}}" alt="">
+            </div>
+          </div>
+
+          <div class="description">
+            <h3 class="pj font-bold text-xl">Carlos Leon</h3>
+            <h4 class="pjt font-bold">Ingenieria de Software</h4>
+            <p style="font-family: Consolas, monospace;">Ctrl+Futro</p>
+          </div>
+          <div class="codigo">
+            <h3>Código de alumno</h3>
+            <h4>
+                U202111451</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="head">
+            <div class="circle"></div>
+            <div class="img">
+              <img src="{{url_for('static',filename='img/diego.png')}}" alt="">
+            </div>
+          </div>
+
+          <div class="description">
+            <h3 class="pj font-bold text-xl">Diego Sejias</h3>
+            <h4 class="pjt font-bold">Ingenieria de Software</h4>
+            <p style="font-family: Consolas, monospace;">
+                Dev&Conqr
+            </p>
+          </div>
+          <div class="codigo">
+            <h3>Código de alumno</h3>
+            <h4>
+                U202210167</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="scrol"></div>
+  <!-- Import menu -->
+  <script src="{{url_for('static', filename='js/index.js')}}"></script>
+  <footer class="footer">
+    <p>© 2024 grupo 5 Sistemas operativos</p>
+  </footer>
+</body>
+
+</html>
