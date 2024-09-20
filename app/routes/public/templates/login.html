@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+
+{% block title %} TechPulse - Login {% endblock %}
+
+{% block body %}
+    <div class="flex items-center justify-center min-h-screen bg-[#004a61]">
+        <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-xl shadow-2xl">
+            <div class="text-center">
+                <svg class="mx-auto h-12 w-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 12h18M3 21h18" /></svg>
+                <h2 class="mt-6 text-3xl font-extrabold text-gray-900">Welcome to TechPulse</h2>
+                <p class="mt-2 text-sm text-gray-600">Please sign in to your account</p>
+            </div>
+            <form class="mt-8 space-y-6" id="loginForm">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div class="mb-4">
+                        <label for="email" class="sr-only">Email address</label>
+                        <div class="relative">
+                            <input id="email" name="email" type="email" required class="pl-10 block w-full p-2 border border-gray-300 rounded-md" placeholder="Email address">
+                            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0H4m4 0v8m0-8h12v8M8 12l4 4 4-4" /></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="password" class="sr-only">Password</label>
+                        <div class="relative">
+                            <input id="password" name="password" type="password" required class="pl-10 block w-full p-2 border border-gray-300 rounded-md" placeholder="Password">
+                            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3" /></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="remember-me" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+                    </div>
+                    <div class="text-sm">
+                        <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Forgot your password?</a>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-2 px-4 text-white bg-blue-600 rounded-md">Sign in to TechPulse</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('remember-me').checked;
+
+            console.log('Login attempted with:', { email, password, rememberMe });
+        });
+    </script>
+{% endblock %}

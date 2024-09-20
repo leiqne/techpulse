@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{%block title%}{%endblock%}</title>
+
+    {%block head%}
+    {%endblock%}
+</head>
+
+<body>
+    {%block header%}
+    <nav class="nav">
+        <div class="logo">Grupo 5</div>
+        <ul class="menu">
+          <li>
+            <a href="/application">Aplicación</a>
+          </li>
+          <li>
+            <a href="#integrantes">Integrantes</a>
+          </li>
+        </ul>
+      </nav>
+    {%endblock%}
+
+    {%block body%}
+    {%endblock%}
+
+    {%block footer%}
+    {%endblock%}
+</body>
+{%block scripts%}
+{%endblock%}
+
+</html>
