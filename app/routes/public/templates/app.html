@@ -1,0 +1,42 @@
+<html></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Import Application CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo">Aplicación</div>
+            <ul class="menu">
+                <li><a href="/">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    </main>
+    
+    <!-- Import menu -->
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+    <!-- Footer -->
+    <footer class="footer  text-white">
+        <p>© 2023 grupo 2 mate computacional</p>
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M-5.64,33.06 C86.34,-58.69 315.46,110.05 500.00,49.98 L588.03,174.19 L0.00,150.00 Z"
+                    style="stroke: none; fill: #004a61;">
+                </path>
+            </svg>
+        </div>
+    </footer>
+</body>
+
+</html>
