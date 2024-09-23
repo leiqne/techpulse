@@ -9,6 +9,9 @@ def index():
 @route.get("/login")
 def login():
     return render_template("login.html")
+@route.get("/register")
+def register():
+    return render_template("register.html")
 @route.get("/application")
 def application():
    return render_template("app.html")
